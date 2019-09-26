@@ -1,16 +1,16 @@
-// import Home from './home';
+// import Page from './page';
 
 // export default{
-//     Home
+//    Page
 // }
 
 import React, { PureComponent } from 'react';
 
-export default class Home extends PureComponent {
+export default class Page extends PureComponent {
     render() {
         return (
             <div>
-                this is Home~
+                this is Page~
             </div>
         )
     }
