@@ -7,7 +7,7 @@ import Page from './views/Pages';
 
 // 路由
 const getRouter = () => {
-    <Switch>
+    return <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/page" component={Page}/>
     </Switch>

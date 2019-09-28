@@ -1,10 +1,8 @@
-// import Home from './home';
+import Home from './home';
 
-// export default{
-//     Home
-// }
+export default Home;
 
-import React, { PureComponent } from 'react';
+/* import React, { PureComponent } from 'react';
 
 export default class Home extends PureComponent {
     render() {
@@ -14,4 +12,4 @@ export default class Home extends PureComponent {
             </div>
         )
     }
-}
+} */

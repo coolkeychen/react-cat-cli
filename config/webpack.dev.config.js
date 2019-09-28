@@ -1,6 +1,7 @@
  const path = require('path');
 
 module.exports = {
+    devtool: 'inline-source-map',
     mode: 'development',
     /* 入口 */
     entry: path.join(__dirname, '../src/index.js'),
@@ -18,7 +19,10 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: ['.jsx','.js']
+        extensions: ['.jsx','.js'],
+        alias : {
+            '@':path.join(__dirname, '../src/pages'),
+        }
     },
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
@@ -26,6 +30,13 @@ module.exports = {
         host: '0.0.0.0', // 允许ip访问
         hot: true, // 热更新
         historyApiFallback: true, // 解决启动后刷新404
-        port: 8000 // 端口
+        port: 8000, // 端口
+        proxy : {
+            '/api': {
+                target: 'http://localhost:8000',
+                pathRewrite: {'^/api':''}, // 可转换
+                changeOrigin: true // 可以帮我们解决跨哉问题
+            }
+        }
     },
 }

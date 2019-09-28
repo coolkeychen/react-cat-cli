@@ -1,10 +1,8 @@
-// import Page from './page';
+import Page from './page';
 
-// export default{
-//    Page
-// }
+export default Page;
 
-import React, { PureComponent } from 'react';
+/* import React, { PureComponent } from 'react';
 
 export default class Page extends PureComponent {
     render() {
@@ -14,4 +12,4 @@ export default class Page extends PureComponent {
             </div>
         )
     }
-}
+} */
